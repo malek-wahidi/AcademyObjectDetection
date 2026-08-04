@@ -1,0 +1,42 @@
+[project]
+name = "inmind-loco-detection"
+version = "0.1.0"
+description = "A student baseline for warehouse object detection on the LOCO dataset."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "einops>=0.8",
+    "matplotlib>=3.8",
+    "numpy>=1.26",
+    "pyyaml>=6.0",
+    "torch>=2.7",
+    "torchmetrics[detection]>=1.7",
+    "torchvision>=0.22",
+    "tqdm>=4.66",
+    "wandb>=0.17",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.12.0",
+]
+
+[tool.ruff]
+line-length = 100
+exclude = ["AcademyObjectDetection.ipynb"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128", marker = "sys_platform == 'linux'" }
+torchvision = { index = "pytorch-cu128", marker = "sys_platform == 'linux'" }
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

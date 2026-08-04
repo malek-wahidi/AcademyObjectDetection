@@ -1,0 +1,18 @@
+data:
+  raw_dir: dataset
+
+train:
+  epochs: 10
+  batch_size: 2
+  learning_rate: 0.005
+  momentum: 0.9
+  weight_decay: 0.0005
+  num_workers: 0
+  seed: 0
+
+output_dir: runs/baseline
+
+wandb:
+  enabled: false
+  project: inmind-loco-detection
+  entity: null
