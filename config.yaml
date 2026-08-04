@@ -2,8 +2,8 @@ data:
   raw_dir: dataset
 
 train:
-  epochs: 10
-  batch_size: 2
+  epochs: 20
+  batch_size: 4
   learning_rate: 0.005
   momentum: 0.9
   weight_decay: 0.0005

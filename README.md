@@ -77,7 +77,7 @@ Stock `fasterrcnn_mobilenet_v3_large_fpn` with LOCO's five classes plus backgrou
 
 | mAP@0.5 | Parameters | GFLOPs |
 | ------- | ---------- | ------ |
-| _TBD_   | 18,950,729 | _TBD_  |
+| 0.2547  | 18,950,729 | 23.825 |
 
 Pareto comparison requires final-evaluation mAP@0.5 at least as high as the recorded baseline mAP.
 
