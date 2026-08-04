@@ -93,7 +93,9 @@ def test_validation_holdout_is_deterministic_and_disjoint(tmp_path: Path) -> Non
 
     assert len(train_dataset) == 2
     assert len(validation_dataset) == 2
-    assert set(validation_dataset.image_paths.values()).isdisjoint(train_dataset.image_paths.values())
+    assert set(validation_dataset.image_paths.values()).isdisjoint(
+        train_dataset.image_paths.values()
+    )
 
 
 def test_test_split_uses_subsets_one_and_four(tmp_path: Path) -> None:
